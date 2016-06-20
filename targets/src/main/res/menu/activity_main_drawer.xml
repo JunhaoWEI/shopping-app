@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/product_store_on"
+            android:title="购物"/>
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/icon_nav_account"
+            android:title="账户"/>
+        <item
+            android:id="@+id/nav_2dcode"
+            android:icon="@drawable/icon_nav_account"
+            android:title="二维码"/>
+
+    </group>
+
+    <item android:title="更多">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/icon_nav_settings"
+                android:title="设置"/>
+
+        </menu>
+    </item>
+
+</menu>

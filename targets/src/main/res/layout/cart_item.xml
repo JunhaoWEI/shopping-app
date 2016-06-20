@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="10dp"
+        android:id="@+id/rl">
+
+        <ImageView
+            android:id="@+id/iv_product"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            tools:background="@color/color_item_press"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/iv_product"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="正宗烟台苹果水果新鲜山东栖霞红富士苹果净重5斤包邮"/>
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="$16.00"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="right"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:text="数量："/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_minus"-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="18dp"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:background="@drawable/quantity"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="-"-->
+                    <!--style="@style/Base.Widget.AppCompat.Button.Borderless"-->
+                    <!--android:textSize="16sp"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_quantity"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:text="1"-->
+                    <!--android:textColor="@color/black"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_plus"-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="18dp"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:background="@drawable/quantity"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="+"-->
+                    <!--style="@style/Base.Widget.AppCompat.Button.Borderless"-->
+                    <!--android:textSize="16sp"/>-->
+            <!--</LinearLayout>-->
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bright_line"/>
+
+</LinearLayout>

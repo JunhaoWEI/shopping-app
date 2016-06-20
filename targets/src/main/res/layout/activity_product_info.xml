@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProductInfoActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card:cardBackgroundColor="@android:color/white"
+                card:cardCornerRadius="1dp"
+                card:cardElevation="0.5dp"
+                card:cardMaxElevation="@dimen/cardview_default_elevation"
+                card:cardPreventCornerOverlap="true"
+                card:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <io.github.luckyandyzhang.cleverrecyclerview.CleverRecyclerView
+                            android:id="@+id/cleverv"
+                            android:layout_width="match_parent"
+                            android:layout_height="270dp"
+                            tools:background="#ffc4c4"></io.github.luckyandyzhang.cleverrecyclerview.CleverRecyclerView>
+
+                        <TextView
+                            android:id="@+id/tv_picture_positon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="18dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/clever_bg"
+                            android:textColor="#ffffff"
+                            tools:text="1 of 12"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <TextView
+                            android:id="@+id/tv_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:text="VIZIO 55 Class 2160p 120Hz FullArray LED Smart TV"
+                            android:textSize="20sp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp">
+
+                            <TextView
+                                android:id="@+id/tv_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="$799.99"
+                                android:textColor="#000000"
+                                android:textSize="20sp"/>
+
+                            <com.hedgehog.ratingbar.RatingBar
+                                android:id="@+id/ratingbar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:layout_toLeftOf="@+id/tv_number"
+                                hedgehog:clickable="false"
+                                hedgehog:starCount="5"
+                                hedgehog:starEmpty="@mipmap/ic_star_empty"
+                                hedgehog:starFill="@mipmap/ic_star_fill"
+                                hedgehog:starImageSize="16dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="(21)"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cv_like"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        card:cardBackgroundColor="@android:color/white"
+                        card:cardCornerRadius="1dp"
+                        card:cardElevation="0.5dp"
+                        card:cardMaxElevation="@dimen/cardview_default_elevation"
+                        card:cardPreventCornerOverlap="true"
+                        card:cardUseCompatPadding="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="收藏"/>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cv_add"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        card:cardBackgroundColor="@android:color/white"
+                        card:cardCornerRadius="1dp"
+                        card:cardElevation="0.5dp"
+                        card:cardMaxElevation="@dimen/cardview_default_elevation"
+                        card:cardPreventCornerOverlap="true"
+                        card:cardUseCompatPadding="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="加入购物车"/>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="购买"
+                    android:textColor="@color/cardview_dark_background"
+                    android:id="@+id/bt_buy_item"/>
+                <!--
+                                <android.support.v7.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    card:cardBackgroundColor="@android:color/white"
+                                    card:cardCornerRadius="0dp"
+                                    card:cardElevation="0.5dp"
+                                    card:cardMaxElevation="@dimen/cardview_default_elevation"
+                                    card:cardPreventCornerOverlap="true"
+                                    card:cardUseCompatPadding="true">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="详情"/>
+                                </android.support.v7.widget.CardView>
+
+                                <android.support.v7.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    card:cardBackgroundColor="@android:color/white"
+                                    card:cardCornerRadius="0dp"
+                                    card:cardElevation="1dp"
+                                    card:cardMaxElevation="@dimen/cardview_default_elevation"
+                                    card:cardPreventCornerOverlap="true"
+                                    card:cardUseCompatPadding="true">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="评价"/>
+                                </android.support.v7.widget.CardView>-->
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card:cardBackgroundColor="@android:color/white"
+                card:cardCornerRadius="1dp"
+                card:cardElevation="0.5dp"
+                card:cardMaxElevation="@dimen/cardview_default_elevation"
+                card:cardPreventCornerOverlap="true"
+                card:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="商品详情"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="安卓自带的Shape,可不可以设置成只有一条边线的那种,就类似下划线那种效果。"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="更多"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/line"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="评价"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5.0"
+                            android:textColor="@color/black"
+                            android:textSize="60sp"
+                            android:textStyle="italic"/>
+
+                        <com.hedgehog.ratingbar.RatingBar
+                            android:id="@+id/rate_bar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toRightOf="@+id/tv_rate"
+                            hedgehog:clickable="false"
+                            hedgehog:starCount="5"
+                            hedgehog:starEmpty="@mipmap/ic_star_empty"
+                            hedgehog:starFill="@mipmap/ic_star_fill"
+                            hedgehog:starImageSize="16dp"></com.hedgehog.ratingbar.RatingBar>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rate_bar"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@+id/tv_rate"
+                            android:text="(4)"
+                            android:textSize="12sp"/>
+                    </RelativeLayout>
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
